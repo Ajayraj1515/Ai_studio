@@ -16,6 +16,6 @@ router.post('/login', validateBody(LoginSchema), authController.login);
 router.post('/logout', authController.logout);
 
 // GET /api/auth/me
-router.get('/me', authController.getCurrentUser);
+router.get('/me', authenticateToken, authController.getCurrentUser);
 
 export { router as authRoutes };
