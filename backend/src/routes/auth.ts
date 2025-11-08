@@ -17,4 +17,4 @@ router.post('/logout', authController.logout);
 // GET /api/auth/me
 router.get('/me', authController.getCurrentUser);
 
-export { authRoutes as router };
+export { router as authRoutes };
