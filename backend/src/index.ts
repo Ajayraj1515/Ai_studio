@@ -35,7 +35,7 @@ app.use(helmet({
       defaultSrc: ["'self'"],
       styleSrc: ["'self'", "'unsafe-inline'"],
       scriptSrc: ["'self'"],
-      imgSrc: ["'self'", "data:", "blob:"],
+      imgSrc: ["'self'", "data:", "blob:", "https://picsum.photos"],
     },
   },
 }));
