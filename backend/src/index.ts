@@ -53,6 +53,9 @@ app.use(cookieParser());
 app.use(morgan('combined'));
 app.use(limiter);
 
+// Serve static files (uploaded images)
+app.use('/uploads', express.static(path.join(process.cwd(), 'uploads')));
+
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });
