@@ -10,6 +10,7 @@ import { errorHandler } from './middleware/errorHandler.js';
 import { authRoutes } from './routes/auth.js';
 import { generationRoutes } from './routes/generations.js';
 import { setupDatabase } from './database/setup.js';
+import path from 'path';
 
 // Load environment variables
 dotenv.config();
